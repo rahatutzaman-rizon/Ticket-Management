@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 const ProjectCard = ({ name, role, project, priority, budget, priorityColor }) => {
   return (
     <div className="flex items-center justify-between p-4 bg-white shadow rounded-lg">
@@ -11,9 +13,8 @@ const ProjectCard = ({ name, role, project, priority, budget, priorityColor }) =
       </div>
       <div className="text-sm text-gray-500">{project}</div>
       <div className={`text-sm ${priorityColor}`}>{priority}</div>
-      <div className="text-sm text-gray-800">${budget}k</div>
+      <div className="text-sm text-gray-800">{budget}</div>
     </div>
   );
 };
-
 export default ProjectCard;

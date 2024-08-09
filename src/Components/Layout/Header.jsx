@@ -30,7 +30,7 @@ const Header = () => (
       {/* Icons and User Avatar */}
       <Bell size={20} className="text-gray-500 cursor-pointer" />
       <Settings size={20} className="text-gray-500 cursor-pointer" />
-      <img src="/path/to/avatar.jpg" alt="User" className="w-10 h-10 rounded-full object-cover" />
+      <img src="https://i.ibb.co/M7PR1QN/IMG-20210331-222352-817.jpg" alt="User" className="w-10 h-10 rounded-full object-cover" />
     </div>
   </header>
 );
