@@ -1,47 +1,57 @@
 import { Link } from 'react-router-dom';
-import { Home, Users, Ticket, MessageSquare, FileText, HelpCircle, LogOut } from 'lucide-react';
+import { Home, Users, Ticket, MessageSquare, FileText, HelpCircle, LogOut, Box } from 'lucide-react';
 
 const navItems = [
   { icon: Home, text: 'Home', path: '/' },
-  { icon: Users, text: 'Contacts', path: '/contacts' },
+  { icon: Box, text: 'Contacts', path: '/contacts' },
   { icon: Ticket, text: 'Ticket', path: '/tickets' },
-  { icon: MessageSquare, text: 'Chats', path: '/chats' },
+  { icon: MessageSquare, text: 'Chats', path: '/chats', notification: 1 },
   { icon: Users, text: 'Users', path: '/users' },
   { icon: FileText, text: 'Note', path: '/notes' },
 ];
 
 const Sidebar = () => (
-  <div className="w-40 bg-indigo-900 text-white h-screen fixed left-0 top-0 p-3 flex flex-col">
-    <h1 className="text-lg font-bold mb-6">XYZ.com</h1>
+  <div className="w-48 bg-indigo-950 text-white h-screen fixed left-0 top-0 flex flex-col">
+    <style>
+      {`
+        .sidebar-text {
+          font-size: 10px; /* Adjust the font size as needed */
+        }
+      `}
+    </style>
     <nav className="flex-grow">
-      <ul className="space-y-1">
+      <h1 className="text-2xl font-bold px-8 text-center py-2 sidebar-text">Sheba xyz</h1>
+      <ul className="space-y-1 ">
         {navItems.map((item, index) => (
           <li key={index}>
-            <Link to={item.path} className="flex items-center space-x-3 p-2 rounded hover:bg-indigo-800">
-              <item.icon size={18} />
-              <span className="text-sm">{item.text}</span>
+            <Link to={item.path} className={`flex items-center justify-center space-x-3 px-4 py-3 ${index === 0 ? 'bg-blue-600' : ''}`}>
+              <item.icon size={15} />
+              <span className="sidebar-text">{item.text}</span>
+              {item.notification && (
+                <span className="ml-auto bg-red-500 text-xs rounded-full px-1">{item.notification}</span>
+              )}
             </Link>
           </li>
         ))}
       </ul>
     </nav>
-    <div className="mt-auto mb-4">
-      <div className="bg-indigo-800 p-3 rounded-lg mb-4 text-xs">
-        <p className="font-bold mb-2">Today's 40% off offer on all of our best features</p>
-        <button className="bg-white text-indigo-900 px-3 py-1 rounded-full text-xs font-bold">Upgrade plan</button>
+    <div className="mt-auto mb-2 px-4">
+      <div className="bg-blue-600 p-2 rounded-lg mb-4 text-xs sidebar-text text-center">
+        <p className="font-medium mb-2">Today's 40% off offer on all of our best features</p>
+        <button className="bg-white text-blue-600 px-4 py-1 rounded-md text-xs font-bold sidebar-text">Upgrade plan</button>
       </div>
       <ul className="space-y-1">
         <li>
-          <a href="#" className="flex items-center space-x-3 p-2 hover:bg-indigo-800 rounded">
-            <HelpCircle size={18} />
-            <span className="text-sm">Help</span>
-          </a>
+          <Link to="/help" className="flex items-center justify-center space-x-3 py-3">
+            <HelpCircle size={15} />
+            <span className="sidebar-text">Help</span>
+          </Link>
         </li>
         <li>
-          <a href="#" className="flex items-center space-x-3 p-2 hover:bg-indigo-800 rounded">
-            <LogOut size={18} />
-            <span className="text-sm">Logout</span>
-          </a>
+          <Link to="/logout" className="flex items-center justify-center space-x-3 py-3">
+            <LogOut size={20} />
+            <span className="sidebar-text">Logout</span>
+          </Link>
         </li>
       </ul>
     </div>

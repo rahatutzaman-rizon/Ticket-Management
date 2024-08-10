@@ -8,7 +8,10 @@ const CostBreakdown = () => {
 
   return (
     <div className="w-64 bg-white rounded-lg shadow-md p-4">
-      <h2 className="text-xl font-semibold mb-2">Cost Breakdown</h2>
+      <div className="flex justify-between items-center mb-2">
+        <h2 className="text-lg font-semibold">Cost Breakdown</h2>
+        <span className="bg-green-500 text-white rounded text-sm font-medium">+48%</span>
+      </div>
       <div className="relative h-32">
         <CircularProgressbar
           value={percentage}
@@ -23,14 +26,12 @@ const CostBreakdown = () => {
             textColor: '#000',
             trailColor: '#e5e7eb',
           })}
-          circleRatio={0.5}
+          circleRatio={0.50}
         />
-        <div className="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
-          {percentage}%
-        </div>
       </div>
-      <p className="text-center mt-2 text-gray-600">Marketing Budget</p>
+      <p className="text-sm text-black mt-2">Marketing Budget</p>
     </div>
   );
 };
+
 export default CostBreakdown;
