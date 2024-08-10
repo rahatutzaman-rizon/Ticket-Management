@@ -20,7 +20,7 @@ const Sidebar = () => (
       `}
     </style>
     <nav className="flex-grow">
-      <h1 className="text-2xl font-bold px-8 text-center py-2 ">Sheba xyz</h1>
+      <h1 className="text-xl font-bold px-8 text-center py-2 ">Sheba xyz</h1>
       <ul className="space-y-1 ">
         {navItems.map((item, index) => (
           <li key={index}>
