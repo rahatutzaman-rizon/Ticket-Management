@@ -30,11 +30,11 @@ const OverviewCard = ({ icon, title, value, change, isPositive, bgColor, chartCo
         </div>
         <div className="text-3xl font-bold text-gray-800">{value}</div>
         <div
-          className={`mt-1 p-1 bg-white flex items-center rounded-full ${isPositive ? 'text-green-600' : 'text-red-600'}`}
+          className={`  mr-10 bg-white  flex items-center rounded  ${isPositive ? 'text-green-600' : 'text-red-600'}`}
           style={{ fontSize: '12px' }}
         >
-          {isPositive ? <FaArrowUp className="mr-1" /> : <FaArrowDown className="mr-1" />}
-          <span style={{ fontSize: '8px' }}>{change} <span className='text-black font-bold'> this week</span></span>
+          {isPositive ? <FaArrowUp className="ml-1" /> : <FaArrowDown className="ml-1 " />}
+          <span style={{ fontSize: '6px' }}>{change} <span className='text-black font-semibold'> this week</span></span>
         </div>
       </div>
       
