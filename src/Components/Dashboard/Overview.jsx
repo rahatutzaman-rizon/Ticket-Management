@@ -34,7 +34,7 @@ const OverviewCard = ({ icon, title, value, change, isPositive, bgColor, chartCo
           style={{ fontSize: '12px' }}
         >
           {isPositive ? <FaArrowUp className="mr-1" /> : <FaArrowDown className="mr-1" />}
-          <span style={{ fontSize: '8px' }}>{change} <span className='text-black'> this week</span></span>
+          <span style={{ fontSize: '8px' }}>{change} <span className='text-black font-bold'> this week</span></span>
         </div>
       </div>
       

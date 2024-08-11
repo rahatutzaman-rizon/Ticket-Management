@@ -9,20 +9,26 @@ import TopProjectsDashboard from "../Components/Dashboard/TopProjects";
 
 const Dashboard = () => {
   return (
-    <div className="p-4 bg-gray-100 min-h-screen">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <div className="p-4 bg-gray-100 min-h-screen ">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-0">
         {/* Left Column */}
-        <div className="lg:col-span-2 space-y-4">
+        <div className="lg:col-span-2 space-y-6">
           {/* Overview Section */}
-          <div className="p-4 bg-white rounded-lg shadow">
+          <div className="p-4 bg-gray-100 rounded-lg shadow ">
             <div className="flex justify-between items-center mb-4">
-              <h1 className="text-lg font-semibold text-gray-800">Overview</h1>
-              <select className="border rounded px-2 py-1 text-sm">
+             <div className="flex gap-2">
+              <h2 className="p-2 bg-purple-300"></h2>
+              <p className="text-lg font-bold text-black  style={{
+  fontWeight: 700,
+  fontSize: '240px'
+}} ">Overview</p>
+             </div>
+              <select className="border rounded px-2 py-1 text-xs font-bold">
                 <option>This week</option>
               </select>
             </div>
          
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-1">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
       <OverviewCard
        icon="earnings"
         title="Earnings"
@@ -58,7 +64,7 @@ const Dashboard = () => {
 
           {/* Projects Section */}
 <div className="bg-white rounded-lg shadow p-2">
-  <div className="flex justify-between items-center mb-4">
+  <div className="flex justify-between items-center mb-2">
     <TopProjectsDashboard></TopProjectsDashboard>
   </div>
 
@@ -81,7 +87,7 @@ const Dashboard = () => {
         </div>
 
         {/* Right Column */}
-        <div className="space-y-4">
+        <div className="space-y-6">
           <ActivityCard />
           <CardInfo cardHolder="Dinda Anggita" expires="03/23" cardNumber="1234" />
           <MostOrderByCountry />

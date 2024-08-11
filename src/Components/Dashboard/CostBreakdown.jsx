@@ -5,7 +5,7 @@ import 'react-circular-progressbar/dist/styles.css';
 const CostBreakdown = () => {
   const percentage = 48;
   const budget = 594;
-
+ 
   return (
     <div className="w-64 bg-white rounded-lg shadow-md p-4">
       <div className="flex justify-between items-center mb-2">

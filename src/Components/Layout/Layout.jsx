@@ -9,16 +9,17 @@ const Layout = () => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="flex h-screen bg-gray-100 overflow-hidden">
-      <div className="w-48 bg-indigo-900 text-white">
+    <div className="flex h-screen bg-gray-100 flex-1 overflow-auto">
+      <div className="w-42 bg-indigo-900 text-white flex-shrink-0">
         <Sidebar />
       </div>
 
-      <div className="flex flex-col flex-1 overflow-hidden">
+      <div className="flex flex-col flex-1">
         <Header toggleSidebar={toggleSidebar} />
-        
-        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100">
-          <div className="container mx-auto px-6 py-8">
+
+        {/* Add overflow-auto to this container to allow full-page scrolling */}
+        <main className="">
+          <div className="container mx-auto px-4 py-2">
             <Outlet />
           </div>
         </main>
