@@ -16,9 +16,9 @@ const TopProjectsDashboard = () => {
           <h2 className="text-lg font-bold text-black">Top Projects</h2>
           <h5 className='text-sm'>Best Products</h5>
         </div>
-        <div className="relative">
-          <select className="appearance-none bg-white border border-gray-300 rounded px-3 py-1 pr-8 text-sm text-gray-700 focus:outline-none focus:border-blue-500">
-            <option>March 2022</option>
+        <div className="relative ">
+          <select className=" appearance-none bg-white border border-gray-300 rounded px-3 py-1 pr-8 text-sm text-gray-700 focus:outline-none focus:border-blue-500">
+            <option className=''>March 2022</option>
           </select>
           <ChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
         </div>

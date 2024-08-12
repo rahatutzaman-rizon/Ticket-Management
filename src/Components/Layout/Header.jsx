@@ -10,22 +10,28 @@ const Header = () => {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <header className="bg-white mt-4 dark:bg-gray-800 p-3 rounded-lg ml-8    flex justify-between items-start shadow-sm mx-4">
+      <header className="bg-white mt-4 dark:bg-gray-800 p-4 rounded-lg ml-8 flex justify-between items-start shadow-sm mx-4">
         {/* Dashboard Title */}
-        <h2 className="text-xl mt-1 font-bold text-black dark:text-white">Dashboard</h2>
+        <h2 style={{
+          fontSize: '20px',
+          marginTop: '0.25rem',
+          fontWeight: '700',
+          color: 'black'
+        }}>
+          Dashboard
+        </h2>
 
         {/* Search and Controls */}
-        <div className="flex items-center    gap-4">
+        <div className="flex items-center gap-8">
           {/* Search Bar */}
-        
-          <div className="relative w-full mr-24">
-      <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black dark:text-gray-300" size={18} />
-      <input
-        type="text"
-        placeholder="Search here..."
-        className="pl-10 pr-4 py-2 text-xs rounded-full w-72 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white placeholder-black"
-      />
-    </div>
+          <div className="relative w-full mr-8">
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black dark:text-gray-300" size={18} />
+            <input
+              type="text"
+              placeholder="Search here..."
+              className="pl-10 pr-4 py-2 text-xs rounded-full w-96 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white placeholder-black"
+            />
+          </div>
 
           {/* Light/Dark Mode Toggle */}
           <div className="flex items-center space-x-2">
